@@ -1,16 +1,5 @@
 <?php
-session_start();
-
-$email=$_SESSION["email"];
-
-$bid = $_GET["b_ID"];
-
-
-
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
- {
-
-$db = new mysqli("Localhost", "ppa488", "pP0816;", "ppa488");
+$db = new mysqli("Localhost", "vbt939", "Vatsa@", "vbt939");
    
  if ($db->connect_error)
     {
@@ -18,15 +7,8 @@ $db = new mysqli("Localhost", "ppa488", "pP0816;", "ppa488");
     }
 
 
-$qp = "SELECT * FROM user WHERE email = '$email'";
-    $rp = $db->query($qp);
-    $rowp = $rp->fetch_assoc();
-    $id = $rowp["user_ID"];
-    $photo = $rowp["u_avatar"];
-$handle = $rowp ["handle"];
 
-
-$comment = "SELECT u_dec FROM note WHERE n_ID = $bid";
+$comment = "SELECT * FROM FileMnge WHERE f_ID = '1";
 $r1 = $db->query($comment);
 $row2 = $r1->fetch_assoc();
 $c = $row2["u_dec"];
@@ -47,20 +29,7 @@ $cc = $_POST["message"];
 $change = "UPDATE note SET u_dec = '' WHERE n_ID = $bid";
 $r3 = $db->query($change);
 header("Location: RoomBooking1.php");
-
-
 }
-
-
-
-
-
-
-}
-else {
-    echo "Please log in first to see this page.";
-}
-
 
 ?>
 <!DOCTYPE html>
