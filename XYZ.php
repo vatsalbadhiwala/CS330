@@ -7,28 +7,21 @@ $db = new mysqli("Localhost", "vbt939", "Vatsa@", "vbt939");
     }
 
 
-
-$comment = "SELECT * FROM FileMnge WHERE f_ID = '1";
-$r1 = $db->query($comment);
-$row2 = $r1->fetch_assoc();
-$c = $row2["u_dec"];
-
-
 if (isset($_POST["submitted"]) && $_POST["submitted"])
 {
 $cc = $_POST["message"];
-$change = "UPDATE note SET u_dec = '$cc' WHERE n_ID = $bid";
+$change = "UPDATE FileMnge SET FileData = '$cc' WHERE f_ID = '1'";
 $r3 = $db->query($change);
-header("Location: RoomBooking1.php");
+header("Location: vbt.php");
 
 }
 
 if (isset($_POST["Delete"]) && $_POST["Delete"])
 {
 $cc = $_POST["message"];
-$change = "UPDATE note SET u_dec = '' WHERE n_ID = $bid";
+$change = "UPDATE FileMnge SET FileData = '' WHERE f_ID = '1'";
 $r3 = $db->query($change);
-header("Location: RoomBooking1.php");
+header("Location: vbt.php");
 }
 
 ?>
@@ -52,12 +45,7 @@ header("Location: RoomBooking1.php");
                 <h1>CHAMBER ARENA</h1>
             </div>
             <div class="usersinfo">
-                <div class="avatartitle">
-                    <img src="<?php echo $photo; ?>" width="50px" height="50px" alt="Avatar" class="avatar">
-                </div>
-                <div class="handletitle">
-                    <p><?php echo $handle; ?></p>
-                </div>
+              >
             </div>
         </div>
     </header>
