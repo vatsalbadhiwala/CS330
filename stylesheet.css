@@ -1,6 +1,6 @@
 
 /********************************************************************
-Body ,header, section, article, aside , footer:
+Body 
 ********************************************************************/
 
 body {
@@ -10,23 +10,16 @@ body {
  
 }
 
-header,footer,section,article,nav, aside{
-  border:1px solid grey;
-  margin:2px;
-  margin-bottom:5px;
-  padding:10px;
-     background-color:rgb(132, 133, 132);
-}
-
-header {
-  clear: both;
-  background-color: rgb(5, 51, 51);
-  margin-bottom:1px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-color:rgb(241, 241, 243);
-
+.p1{
+    font-size: 26px;
 
 }
+.p2{
+    text-align: left;
+    font-size: 18px;
+    margin: 10px
+}
+
 
 
 
@@ -82,9 +75,9 @@ Login Page:
     width: 100%;
     padding: 1px;
     height:100%;
-    text-align: center;
+    text-align: right;
     background: url(Login.png);
-    
+    color: rgb(165, 219, 85);
     position: absolute;
     top: 50%;
     left: 49.7%;
@@ -93,6 +86,12 @@ Login Page:
 
 
 }
+.Login h1 {
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color:  rgb(165, 219, 85);
+    font-size: 60px;
+  }
 
 
 
@@ -103,9 +102,10 @@ Table Effects:
 
 table {
   font-family: 'Times New Roman', Times, serif;
-  font-size:40px;
+  font-size:30px;
   border-collapse: seperate;
-  width: 100%;
+  width: 99%;
+  margin:10px;
 }
 
 td, th {
@@ -160,13 +160,30 @@ Directory Page:
 
 }
 
-.textbx {
-  
-    margin: 20px ;
-    margin-left:25%;
-    background:rgb(189, 188, 188);
-    border-radius: 6px;
-  }
+
+
+/******************************************************************
+File Management Page
+*******************************************************************/
+.File{   width: 100%;
+    padding: 1px;
+    height:100%;
+    text-align: center;
+    background: url(Directory.png);
+    Color : rgb(63, 61, 61);
+    position: absolute;
+    top: 50%;
+    left: 49.7%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+
+}
+.File h1 {
+  margin-top: 122px;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(63, 61, 61);
+  font-size: 60px;
+}
 
 
 
